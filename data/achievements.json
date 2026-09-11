@@ -1,0 +1,38 @@
+[
+  {
+    "id": "first_clear",
+    "icon": "🧹",
+    "title": { "id": "Pembersih Pemula", "en": "First Cleaner" },
+    "desc": { "id": "Berhasil membersihkan bahaya di level 1", "en": "Cleared hazards in level 1" }
+  },
+  {
+    "id": "zero_mistake",
+    "icon": "🛡️",
+    "title": { "id": "Tanpa Kesalahan", "en": "Zero Mistake" },
+    "desc": { "id": "Selesaikan level tanpa menurunkan keselamatan", "en": "Finish a level without reducing safety" }
+  },
+  {
+    "id": "safety_master",
+    "icon": "🏅",
+    "title": { "id": "Master Keselamatan", "en": "Safety Master" },
+    "desc": { "id": "Selesaikan semua level dengan keselamatan ≥ 80%", "en": "Finish all levels with safety ≥ 80%" }
+  },
+  {
+    "id": "perfect_prune",
+    "icon": "✂️",
+    "title": { "id": "Pangkas Sempurna", "en": "Perfect Prune" },
+    "desc": { "id": "Selesaikan level 5 dengan skor tinggi", "en": "Complete level 5 with high score" }
+  },
+  {
+    "id": "hint_saver",
+    "icon": "💡",
+    "title": { "id": "Hemat Hint", "en": "Hint Saver" },
+    "desc": { "id": "Selesaikan 3 level tanpa memakai hint", "en": "Complete 3 levels without using any hint" }
+  },
+  {
+    "id": "all_done",
+    "icon": "🏆",
+    "title": { "id": "Lulus SmartSnip", "en": "SmartSnip Graduate" },
+    "desc": { "id": "Menyelesaikan semua 5 level", "en": "Completed all 5 levels" }
+  }
+]

@@ -1,0 +1,89 @@
+[
+  {
+    "id": 1,
+    "pruneCount": 3,
+    "highlightBranches": [1, 3, 5],
+    "tools": ["hand", "tweezers", "shears"],
+    "hintLimit": 2,
+    "hazards": [
+      { "type": "glass", "x": 95, "y": 85, "rot": -15, "size": 13 },
+      { "type": "glass", "x": 175, "y": 110, "rot": 25, "size": 12 },
+      { "type": "glass", "x": 130, "y": 155, "rot": -30, "size": 11 },
+      { "type": "glass", "x": 200, "y": 70, "rot": 10, "size": 12 }
+    ],
+    "lesson": {
+      "id": "Jangan ambil pecahan kaca dengan tangan kosong. Selalu pakai penjepit.",
+      "en": "Never pick up glass shards with bare hands. Always use tweezers."
+    }
+  },
+  {
+    "id": 2,
+    "pruneCount": 3,
+    "highlightBranches": [0, 2, 4],
+    "tools": ["hand", "tweezers", "shears"],
+    "hintLimit": 2,
+    "hazards": [
+      { "type": "wood", "x": 90, "y": 100, "rot": 20, "size": 14 },
+      { "type": "wood", "x": 170, "y": 90, "rot": -15, "size": 13 },
+      { "type": "wood", "x": 125, "y": 160, "rot": 35, "size": 12 },
+      { "type": "wood", "x": 195, "y": 140, "rot": -25, "size": 11 }
+    ],
+    "lesson": {
+      "id": "Potongan kayu kering biasanya aman diambil dengan tangan, asal tidak ada paku atau serpihan tajam.",
+      "en": "Dry wood pieces are usually safe to pick up by hand, as long as there are no nails or sharp splinters."
+    }
+  },
+  {
+    "id": 3,
+    "pruneCount": 3,
+    "highlightBranches": [1, 3, 6],
+    "tools": ["hand", "gloves", "shears"],
+    "hintLimit": 2,
+    "hazards": [
+      { "type": "thorn", "x": 100, "y": 80, "rot": 0, "size": 12 },
+      { "type": "thorn", "x": 165, "y": 105, "rot": 40, "size": 11 },
+      { "type": "thorn", "x": 120, "y": 150, "rot": -20, "size": 13 },
+      { "type": "thorn", "x": 190, "y": 75, "rot": 15, "size": 10 },
+      { "type": "thorn", "x": 145, "y": 180, "rot": -35, "size": 11 }
+    ],
+    "lesson": {
+      "id": "Duri tanaman tajam. Pakai sarung tangan agar tangan terlindungi dari tusukan.",
+      "en": "Plant thorns are sharp. Wear gloves to protect your hands from punctures."
+    }
+  },
+  {
+    "id": 4,
+    "pruneCount": 3,
+    "highlightBranches": [2, 4, 5],
+    "tools": ["hand", "brush", "shears"],
+    "hintLimit": 2,
+    "hazards": [
+      { "type": "mud", "x": 88, "y": 95, "rot": 10, "size": 15 },
+      { "type": "mud", "x": 160, "y": 85, "rot": -20, "size": 14 },
+      { "type": "mud", "x": 205, "y": 125, "rot": 30, "size": 13 },
+      { "type": "mud", "x": 115, "y": 155, "rot": -10, "size": 14 }
+    ],
+    "lesson": {
+      "id": "Lumpur lebih efektif dibersihkan dengan sikat. Tangan tetap bersih dan tidak kotor.",
+      "en": "Mud is more effectively cleaned with a brush. Keeps your hands clean."
+    }
+  },
+  {
+    "id": 5,
+    "pruneCount": 4,
+    "highlightBranches": [0, 2, 4, 6],
+    "tools": ["hand", "tweezers", "gloves", "shears"],
+    "hintLimit": 3,
+    "hazards": [
+      { "type": "glass", "x": 85, "y": 90, "rot": -10, "size": 12 },
+      { "type": "glass", "x": 195, "y": 80, "rot": 20, "size": 11 },
+      { "type": "thorn", "x": 130, "y": 70, "rot": 15, "size": 11 },
+      { "type": "thorn", "x": 160, "y": 150, "rot": -25, "size": 12 },
+      { "type": "glass", "x": 110, "y": 160, "rot": 5, "size": 10 }
+    ],
+    "lesson": {
+      "id": "Saat ada beberapa jenis bahaya, pilih alat yang tepat untuk masing-masing. Keselamatan tetap prioritas.",
+      "en": "When there are multiple hazards, choose the right tool for each one. Safety always comes first."
+    }
+  }
+]
