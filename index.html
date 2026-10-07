@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="SmartSnip - Game edukasi memangkas tanaman dengan aman." />
+  <meta name="theme-color" content="#0F766E" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>SmartSnip — Pangkas Cerdas & Aman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Loading -->
+  <div id="loading" class="overlay active">
+    <div class="loading-card">
+      <div class="logo"><span class="logo-icon">✂️</span><h1>Smart<span>Snip</span></h1></div>
+      <p class="loading-text">Memuat data game...</p>
+    </div>
+  </div>
+
+  <!-- Start Screen -->
+  <div id="start-screen" class="overlay">
+    <div class="start-card">
+      <div class="start-top-controls">
+        <button type="button" id="btn-lang-start" class="ctrl-btn" aria-label="Language">ID</button>
+        <button type="button" id="btn-sound-start" class="ctrl-btn" aria-label="Sound">🔊</button>
+        <button type="button" id="btn-music-start" class="ctrl-btn" aria-label="Music">⏸</button>
+      </div>
+      <div class="logo">
+        <span class="logo-icon" aria-hidden="true">✂️</span>
+        <h1>Smart<span>Snip</span></h1>
+      </div>
+      <p class="tagline" data-i18n="tagline">Belajar memangkas tanaman dengan <strong>aman</strong> &amp; <strong>cerdas</strong></p>
+      <div class="start-features">
+        <div class="feat"><span aria-hidden="true">🛡️</span> <span data-i18n="feat1">Prioritas Keselamatan</span></div>
+        <div class="feat"><span aria-hidden="true">🌿</span> <span data-i18n="feat2">Teknik Pangkas Benar</span></div>
+        <div class="feat"><span aria-hidden="true">📚</span> <span data-i18n="feat3">Edukasi Praktis</span></div>
+      </div>
+      <button type="button" id="btn-start" class="btn btn-primary btn-lg" data-i18n="btnStart">Mulai Bermain</button>
+      <button type="button" id="btn-tutorial" class="btn btn-ghost btn-lg" data-i18n="btnTutorial" style="margin-top:0.5rem">Lihat Tutorial</button>
+      <p class="hint" data-i18n="hintStart">Setiap level punya tantangan berbeda. Pilih alat yang tepat!</p>
+    </div>
+  </div>
+
+  <!-- Tutorial Overlay -->
+  <div id="tutorial-overlay" class="overlay">
+    <div class="start-card tutorial-card">
+      <h2 id="tutorial-title">Cara Bermain</h2>
+      <ol id="tutorial-steps" class="tutorial-steps"></ol>
+      <button type="button" id="btn-tutorial-close" class="btn btn-primary btn-lg">Mengerti, Mulai!</button>
+    </div>
+  </div>
+
+  <!-- Main App -->
+  <div id="app" class="app hidden">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-icon" aria-hidden="true">✂️</span>
+        <span class="brand-name">Smart<span>Snip</span></span>
+      </div>
+      <div class="status">
+        <div class="status-item">
+          <span class="label" data-i18n="level">Level</span>
+          <span id="level-num" class="value">1</span>
+        </div>
+        <div class="status-item">
+          <span class="label" data-i18n="score">Skor</span>
+          <span id="score" class="value">0</span>
+        </div>
+        <div class="status-item safety">
+          <span class="label" data-i18n="safety">Keselamatan</span>
+          <div class="safety-bar" aria-hidden="true"><div id="safety-fill" class="safety-fill"></div></div>
+        </div>
+      </div>
+      <div class="top-controls">
+        <button type="button" id="btn-lang" class="ctrl-btn" aria-label="Language">ID</button>
+        <button type="button" id="btn-sound" class="ctrl-btn" aria-label="Sound">🔊</button>
+        <button type="button" id="btn-music" class="ctrl-btn" aria-label="Music">⏸</button>
+      </div>
+    </header>
+
+    <section class="task-panel">
+      <div class="task-card">
+        <div class="task-header">
+          <span class="task-badge" data-i18n="task">Tugas</span>
+          <span id="task-progress">0/0</span>
+        </div>
+        <p id="task-text">...</p>
+      </div>
+    </section>
+
+    <main class="stage">
+      <div class="plant-wrapper">
+        <div id="plant-area" class="plant-area"></div>
+        <div class="plant-base" aria-hidden="true"></div>
+      </div>
+    </main>
+
+    <section class="tools-panel">
+      <p class="tools-label" data-i18n="chooseTool">Pilih Alat</p>
+      <div class="tools" id="tools"></div>
+      <p id="tool-hint" class="tool-hint" data-i18n="toolHint">Pilih alat lalu klik objek di tanaman</p>
+    </section>
+
+    <footer class="bottom-bar">
+      <button type="button" id="btn-hint" class="btn btn-ghost" data-i18n="btnHint">💡 Hint</button>
+      <button type="button" id="btn-reset" class="btn btn-ghost" data-i18n="btnReset">Ulangi Level</button>
+      <button type="button" id="btn-next" class="btn btn-primary hidden" data-i18n="btnNext">Level Berikutnya →</button>
+    </footer>
+  </div>
+
+  <!-- Education Modal -->
+  <div id="edu-modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card" role="dialog" aria-modal="true">
+      <div class="modal-icon" id="modal-icon" aria-hidden="true">⚠️</div>
+      <h2 id="modal-title">Perhatian!</h2>
+      <p id="modal-body">...</p>
+      <button type="button" id="modal-close" class="btn btn-primary" data-i18n="btnUnderstand">Mengerti</button>
+    </div>
+  </div>
+
+  <!-- Level Complete (with lesson + badges) -->
+  <div id="complete-overlay" class="overlay">
+    <div class="complete-card">
+      <div class="complete-icon" aria-hidden="true">🎉</div>
+      <h2 data-i18n="levelComplete">Level Selesai!</h2>
+      <p id="complete-msg">...</p>
+      <div class="lesson-box">
+        <div class="lesson-label" data-i18n="lessonTitle">Yang Kamu Pelajari</div>
+        <p id="lesson-text"></p>
+      </div>
+      <div id="badge-earned" class="badge-earned hidden"></div>
+      <div class="complete-stats">
+        <div><span id="final-score">0</span><small data-i18n="score">Skor</small></div>
+        <div><span id="final-safety">100%</span><small data-i18n="safety">Keselamatan</small></div>
+      </div>
+      <button type="button" id="btn-continue" class="btn btn-primary btn-lg" data-i18n="btnContinue">Lanjut</button>
+    </div>
+  </div>
+
+  <!-- Badges Panel (simple) -->
+  <div id="badges-overlay" class="overlay">
+    <div class="start-card">
+      <h2>🏅 Badges</h2>
+      <div id="badges-list" class="badges-list"></div>
+      <button type="button" id="btn-badges-close" class="btn btn-primary btn-lg" data-i18n="btnContinue">Lanjut</button>
+    </div>
+  </div>
+
+  <audio id="bgm" src="assets/bgm.mp3" loop preload="auto"></audio>
+    <script>
+    // Failsafe for GitHub Pages: never stay stuck on loading logo
+    setTimeout(function () {
+      var loading = document.getElementById('loading');
+      var start = document.getElementById('start-screen');
+      if (loading && loading.classList.contains('active')) {
+        loading.classList.remove('active');
+        if (start) start.classList.add('active');
+      }
+    }, 1500);
+  </script>
+  <script src="js/game.js"></script>
+</body>
+</html>

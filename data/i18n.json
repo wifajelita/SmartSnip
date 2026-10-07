@@ -28,42 +28,70 @@
     "completeGood": "Hebat! Kamu menyelesaikan level dengan aman.",
     "completeOk": "Level selesai. Coba lebih hati-hati lain kali ya.",
     "toastRemove": "Berhasil dibersihkan! +25",
-    "toastPrune": "Cabang dipangkas! +40",
+    "toastPrune": "Daun dipangkas! +15",
     "toastWrong": "Alat salah! Hati-hati.",
     "toastSelect": "Pilih alat yang sesuai dulu",
     "toastNoPrune": "Cabang ini tidak perlu dipangkas",
     "toastReset": "Level diulang",
     "toastHazardFirst": "Bersihkan bahaya dulu sebelum memangkas!",
-    "toastHintUsed": "Hint digunakan. Sisa: {n}",
-    "toastNoHint": "Hint sudah habis di level ini",
+    "toastHintUsed": "Hint dipakai. Sisa hint: {n}",
+    "toastNoHint": "Hint sudah habis (maksimal 3 untuk seluruh game)",
     "allDoneTitle": "Semua Level Selesai!",
     "allDoneBody": "Selamat! Skor {score}, Keselamatan {safety}%. Terus jaga keselamatan saat berkebun!",
     "lessonTitle": "Yang Kamu Pelajari",
     "badgeUnlocked": "Badge baru terbuka!",
     "tasks": [
-      "Ambil SEMUA pecahan kaca dengan Penjepit, lalu potong 3 cabang emas.",
-      "Angkat potongan kayu kering. Boleh pakai Tangan, lalu pangkas 3 cabang emas.",
-      "Cabut SEMUA duri tajam dengan Sarung Tangan, lalu potong 3 cabang emas.",
-      "Sikat SEMUA noda lumpur dengan Sikat, lalu pangkas 3 cabang emas.",
-      "Campuran: bersihkan kaca (Penjepit) & duri (Sarung Tangan), lalu pangkas 4 cabang emas."
+      "Bersihkan pecahan kaca yang menempel, lalu pangkas daun sampai tanaman berbentuk rapi dan bulat.",
+      "Buang potongan kayu kering, lalu pangkas daun sampai berbentuk SEGITIGA.",
+      "Pisahkan duri-duri tajam, lalu pangkas daun sampai berbentuk BULAT.",
+      "Bersihkan noda lumpur, lalu pangkas daun sampai berbentuk HATI (love).",
+      "Bersihkan semua bahaya, lalu pangkas daun sampai berbentuk OVAL."
     ],
     "edu": {
-      "glassHand": { "icon": "⚠️", "title": "Jangan Pakai Tangan Kosong!", "body": "Pecahan kaca sangat tajam. Bisa melukai jari dan menyebabkan infeksi. Selalu gunakan Penjepit!" },
-      "thornHand": { "icon": "🌵", "title": "Duri Bisa Melukai!", "body": "Duri tanaman tajam. Pakai Sarung Tangan agar tanganmu terlindungi dari tusukan dan iritasi." },
-      "mudHand": { "icon": "🧤", "title": "Pakai Sikat untuk Lumpur", "body": "Lumpur menempel kuat. Sikat lebih efektif dan menjaga tangan tetap bersih." },
-      "wrongTool": { "icon": "🔧", "title": "Alat yang Salah", "body": "Pilih alat yang sesuai dengan jenis bahaya. Setiap tantangan butuh alat yang berbeda." },
-      "hazardFirst": { "icon": "🛡️", "title": "Bersihkan Bahaya Dulu!", "body": "Masih ada benda berbahaya di tanaman. Bersihkan semuanya dengan alat yang benar sebelum memangkas." },
-      "successClean": { "icon": "✅", "title": "Bagus! Area Aman", "body": "Semua bahaya sudah dibersihkan dengan alat yang tepat. Sekarang tanaman aman untuk dipangkas." },
-      "wrongPrune": { "icon": "✂️", "title": "Gunakan Gunting Pangkas", "body": "Untuk memotong cabang, gunakan Gunting Pangkas. Alat lain tidak cocok untuk memotong batang tanaman." }
+      "glassHand": {
+        "icon": "⚠️",
+        "title": "Jangan Pakai Tangan Kosong!",
+        "body": "Pecahan kaca sangat tajam. Bisa melukai jari dan menyebabkan infeksi. Selalu gunakan Penjepit!"
+      },
+      "thornHand": {
+        "icon": "🌵",
+        "title": "Duri Bisa Melukai!",
+        "body": "Duri tanaman tajam. Pakai Sarung Tangan agar tanganmu terlindungi dari tusukan dan iritasi."
+      },
+      "mudHand": {
+        "icon": "🧤",
+        "title": "Pakai Sikat untuk Lumpur",
+        "body": "Lumpur menempel kuat. Sikat lebih efektif dan menjaga tangan tetap bersih."
+      },
+      "wrongTool": {
+        "icon": "🔧",
+        "title": "Alat yang Salah",
+        "body": "Pilih alat yang sesuai dengan jenis bahaya. Setiap tantangan butuh alat yang berbeda."
+      },
+      "hazardFirst": {
+        "icon": "🛡️",
+        "title": "Bersihkan Bahaya Dulu!",
+        "body": "Masih ada benda berbahaya di tanaman. Bersihkan semuanya dengan alat yang benar sebelum memangkas."
+      },
+      "successClean": {
+        "icon": "✅",
+        "title": "Bagus! Area Aman",
+        "body": "Semua bahaya sudah dibersihkan dengan alat yang tepat. Sekarang tanaman aman untuk dipangkas."
+      },
+      "wrongPrune": {
+        "icon": "✂️",
+        "title": "Gunakan Gunting Pangkas",
+        "body": "Untuk memotong cabang, gunakan Gunting Pangkas. Alat lain tidak cocok untuk memotong batang tanaman."
+      }
     },
     "tutorial": {
       "title": "Cara Bermain",
       "steps": [
-        "1. Pilih alat yang sesuai di bagian bawah layar.",
-        "2. Klik / tap benda berbahaya di tanaman (kaca, kayu, duri, lumpur).",
-        "3. Setelah semua bahaya bersih, pilih Gunting lalu potong cabang yang berwarna emas.",
-        "4. Gunakan tombol Hint jika kesulitan (terbatas setiap level).",
-        "5. Jaga bar Keselamatan tetap tinggi!"
+        "1. Pilih alat di bawah (tebak sendiri alat yang tepat untuk setiap bahaya).",
+        "2. Klik benda berbahaya di tanaman sampai bersih.",
+        "3. Pilih Gunting, lalu klik daun untuk memangkas. Daun yang perlu dipangkas akan gugur.",
+        "4. Bentuk muncul dari daun yang tersisa — tanpa tanda khusus.",
+        "5. Hint hanya 3 kali untuk seluruh game."
       ],
       "btn": "Mengerti, Mulai!"
     },
@@ -103,42 +131,70 @@
     "completeGood": "Great job! You completed the level safely.",
     "completeOk": "Level done. Try to be more careful next time.",
     "toastRemove": "Cleared successfully! +25",
-    "toastPrune": "Branch pruned! +40",
+    "toastPrune": "Leaf pruned! +15",
     "toastWrong": "Wrong tool! Be careful.",
     "toastSelect": "Select the correct tool first",
     "toastNoPrune": "This branch doesn't need pruning",
     "toastReset": "Level restarted",
     "toastHazardFirst": "Clear hazards before pruning!",
-    "toastHintUsed": "Hint used. Left: {n}",
-    "toastNoHint": "No hints left for this level",
+    "toastHintUsed": "Hint used. Hints left: {n}",
+    "toastNoHint": "No hints left (max 3 for the whole game)",
     "allDoneTitle": "All Levels Complete!",
     "allDoneBody": "Congrats! Score {score}, Safety {safety}%. Keep practicing garden safety!",
     "lessonTitle": "What You Learned",
     "badgeUnlocked": "New badge unlocked!",
     "tasks": [
-      "Remove ALL glass shards with Tweezers, then cut 3 gold branches.",
-      "Pick up dry wood pieces. Hand is OK, then prune 3 gold branches.",
-      "Remove ALL sharp thorns with Gloves, then cut 3 gold branches.",
-      "Brush off ALL mud stains with the Brush, then prune 3 gold branches.",
-      "Mixed: clear glass (Tweezers) & thorns (Gloves), then prune 4 gold branches."
+      "Clear the glass shards, then prune leaves into a neat ROUND shape.",
+      "Remove dry wood pieces, then prune leaves into a TRIANGLE shape.",
+      "Remove sharp thorns, then prune leaves into a ROUND shape.",
+      "Clean the mud stains, then prune leaves into a HEART shape.",
+      "Clear all hazards, then prune leaves into an OVAL shape."
     ],
     "edu": {
-      "glassHand": { "icon": "⚠️", "title": "Never Use Bare Hands!", "body": "Glass shards are extremely sharp. They can cut your fingers and cause infection. Always use Tweezers!" },
-      "thornHand": { "icon": "🌵", "title": "Thorns Can Hurt!", "body": "Plant thorns are sharp. Wear Gloves to protect your hands from punctures and irritation." },
-      "mudHand": { "icon": "🧤", "title": "Use a Brush for Mud", "body": "Mud sticks firmly. A brush is more effective and keeps your hands clean." },
-      "wrongTool": { "icon": "🔧", "title": "Wrong Tool", "body": "Choose the tool that matches the hazard. Each challenge needs a different tool." },
-      "hazardFirst": { "icon": "🛡️", "title": "Clear Hazards First!", "body": "There are still dangerous objects on the plant. Clear them all with the correct tool before pruning." },
-      "successClean": { "icon": "✅", "title": "Great! Area Safe", "body": "All hazards have been cleared with the right tools. The plant is now safe to prune." },
-      "wrongPrune": { "icon": "✂️", "title": "Use Pruning Shears", "body": "To cut branches you must use pruning shears. Other tools are not suitable for cutting plant stems." }
+      "glassHand": {
+        "icon": "⚠️",
+        "title": "Never Use Bare Hands!",
+        "body": "Glass shards are extremely sharp. They can cut your fingers and cause infection. Always use Tweezers!"
+      },
+      "thornHand": {
+        "icon": "🌵",
+        "title": "Thorns Can Hurt!",
+        "body": "Plant thorns are sharp. Wear Gloves to protect your hands from punctures and irritation."
+      },
+      "mudHand": {
+        "icon": "🧤",
+        "title": "Use a Brush for Mud",
+        "body": "Mud sticks firmly. A brush is more effective and keeps your hands clean."
+      },
+      "wrongTool": {
+        "icon": "🔧",
+        "title": "Wrong Tool",
+        "body": "Choose the tool that matches the hazard. Each challenge needs a different tool."
+      },
+      "hazardFirst": {
+        "icon": "🛡️",
+        "title": "Clear Hazards First!",
+        "body": "There are still dangerous objects on the plant. Clear them all with the correct tool before pruning."
+      },
+      "successClean": {
+        "icon": "✅",
+        "title": "Great! Area Safe",
+        "body": "All hazards have been cleared with the right tools. The plant is now safe to prune."
+      },
+      "wrongPrune": {
+        "icon": "✂️",
+        "title": "Use Pruning Shears",
+        "body": "To cut branches you must use pruning shears. Other tools are not suitable for cutting plant stems."
+      }
     },
     "tutorial": {
       "title": "How to Play",
       "steps": [
-        "1. Select the correct tool at the bottom of the screen.",
-        "2. Tap the hazardous objects on the plant (glass, wood, thorns, mud).",
-        "3. After all hazards are cleared, select Shears and cut the gold-highlighted branches.",
-        "4. Use the Hint button if stuck (limited per level).",
-        "5. Keep the Safety bar high!"
+        "1. Choose a tool (figure out the right one for each hazard).",
+        "2. Tap hazards on the plant until clear.",
+        "3. Select Shears, then click leaves to prune. Leaves that should go will fall off.",
+        "4. The shape comes from remaining leaves — no special marks.",
+        "5. Only 3 hints for the whole game."
       ],
       "btn": "Got it, Start!"
     },
